@@ -29,8 +29,6 @@ extension HealthDataFetcher {
             singleData = saveAsData(sampleType: sampleType, value: quantitySample, units: units, healthType: healthType)
         } else if let categorySample = sample as? HKCategorySample {
             singleData = saveAsData(sampleType: sampleType, value: categorySample, healthType: healthType)
-        } else if #available(iOS 12.0, *), let clinicalSample = sample as? HKClinicalRecord {
-            singleData = saveAsData(sampleType: sampleType, value: clinicalSample, healthType: healthType)
         } else if #available(iOS 10.0, *), let documentSample = sample as? HKDocumentSample {
             singleData = saveAsData(sampleType: sampleType, value: documentSample, healthType: healthType)
         } else if let correlationSample = sample as? HKCorrelation {
@@ -148,18 +146,6 @@ extension HealthDataFetcher {
         data.workoutData.duration = value.duration
         return data
     }
-    
-    @available(iOS 12.0, *)
-    func saveAsData(sampleType: HKObjectType, value: HKClinicalRecord, healthType: HealthTypes) -> HealthData {
-        
-        var data = saveAsDataBase(sampleType: sampleType, value: value, healthType: healthType)
-        data.clinicalRecordData.displayName = value.displayName
-        if let fhirData = value.fhirResource?.data, let fhirJson = String(data: fhirData, encoding: .ascii) {
-            data.clinicalRecordData.fhirResource = fhirJson
-        }
-        return data
-    }
-    
     @available(iOS 10.0, *)
     func saveAsData(sampleType: HKObjectType, value: HKDocumentSample, healthType: HealthTypes) -> HealthData {
         

@@ -15,7 +15,6 @@ class HealthDataUtils: NSObject {
     static var CATEGORY_TYPES: [HKCategoryTypeIdentifier] = []
     static var QUANTITY_TYPES: [(HKQuantityTypeIdentifier, HKUnit?)] = []
     static var CHARACTERISTIC_TYPES: [(HKCharacteristicTypeIdentifier, CharacteristicProcessType)] = []
-    static var CLINICAL_TYPES: [Any] = []
     static var DOCUMENT_TYPES: [HKDocumentTypeIdentifier] = []
     static var CORRELATION_TYPES: [(HKCorrelationTypeIdentifier, [HKUnit])] = []
     static var STATISTICS_OPTIONS_MAP: NSMutableDictionary = [:]

@@ -123,13 +123,6 @@ enum HealthTypes: SwiftProtobuf.Enum {
   case characteristicDateOfBirth // = 99
   case characteristicFitzpatrickSkinType // = 100
   case characteristicWheelchairUse // = 101
-  case clinicalAllergyRecord // = 102
-  case clinicalConditionRecord // = 103
-  case clinicalImmunizationRecord // = 104
-  case clinicalLabResultRecord // = 105
-  case clinicalMedicationRecord // = 106
-  case clinicalProcedureRecord // = 107
-  case clinicalVitalSignRecord // = 108
   case documentCda // = 109
   case correlationBloodPressure // = 110
   case correlationFood // = 111
@@ -243,13 +236,6 @@ enum HealthTypes: SwiftProtobuf.Enum {
     case 99: self = .characteristicDateOfBirth
     case 100: self = .characteristicFitzpatrickSkinType
     case 101: self = .characteristicWheelchairUse
-    case 102: self = .clinicalAllergyRecord
-    case 103: self = .clinicalConditionRecord
-    case 104: self = .clinicalImmunizationRecord
-    case 105: self = .clinicalLabResultRecord
-    case 106: self = .clinicalMedicationRecord
-    case 107: self = .clinicalProcedureRecord
-    case 108: self = .clinicalVitalSignRecord
     case 109: self = .documentCda
     case 110: self = .correlationBloodPressure
     case 111: self = .correlationFood
@@ -361,13 +347,6 @@ enum HealthTypes: SwiftProtobuf.Enum {
     case .characteristicDateOfBirth: return 99
     case .characteristicFitzpatrickSkinType: return 100
     case .characteristicWheelchairUse: return 101
-    case .clinicalAllergyRecord: return 102
-    case .clinicalConditionRecord: return 103
-    case .clinicalImmunizationRecord: return 104
-    case .clinicalLabResultRecord: return 105
-    case .clinicalMedicationRecord: return 106
-    case .clinicalProcedureRecord: return 107
-    case .clinicalVitalSignRecord: return 108
     case .documentCda: return 109
     case .correlationBloodPressure: return 110
     case .correlationFood: return 111
@@ -484,13 +463,6 @@ extension HealthTypes: CaseIterable {
     .characteristicDateOfBirth,
     .characteristicFitzpatrickSkinType,
     .characteristicWheelchairUse,
-    .clinicalAllergyRecord,
-    .clinicalConditionRecord,
-    .clinicalImmunizationRecord,
-    .clinicalLabResultRecord,
-    .clinicalMedicationRecord,
-    .clinicalProcedureRecord,
-    .clinicalVitalSignRecord,
     .documentCda,
     .correlationBloodPressure,
     .correlationFood,
@@ -747,14 +719,6 @@ struct HealthData {
     set {_uniqueStorage()._specificData = .characteristicData(newValue)}
   }
 
-  var clinicalRecordData: ClinicalRecordSpecificData {
-    get {
-      if case .clinicalRecordData(let v)? = _storage._specificData {return v}
-      return ClinicalRecordSpecificData()
-    }
-    set {_uniqueStorage()._specificData = .clinicalRecordData(newValue)}
-  }
-
   var documentData: DocumentSpecificData {
     get {
       if case .documentData(let v)? = _storage._specificData {return v}
@@ -779,7 +743,6 @@ struct HealthData {
     case categoryData(CategorySpecificData)
     case workoutData(WorkoutSpecificData)
     case characteristicData(CharacteristicSpecificData)
-    case clinicalRecordData(ClinicalRecordSpecificData)
     case documentData(DocumentSpecificData)
     case correlationData(CorrelationSpecificData)
 
@@ -791,7 +754,6 @@ struct HealthData {
       case (.categoryData(let l), .categoryData(let r)): return l == r
       case (.workoutData(let l), .workoutData(let r)): return l == r
       case (.characteristicData(let l), .characteristicData(let r)): return l == r
-      case (.clinicalRecordData(let l), .clinicalRecordData(let r)): return l == r
       case (.documentData(let l), .documentData(let r)): return l == r
       case (.correlationData(let l), .correlationData(let r)): return l == r
       default: return false
@@ -881,20 +843,6 @@ struct CharacteristicSpecificData {
   // methods supported on all messages.
 
   var value: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-struct ClinicalRecordSpecificData {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var displayName: String = String()
-
-  var fhirResource: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -1214,15 +1162,7 @@ extension HealthTypes: SwiftProtobuf._ProtoNameProviding {
     98: .same(proto: "CHARACTERISTIC_BLOOD_TYPE"),
     99: .same(proto: "CHARACTERISTIC_DATE_OF_BIRTH"),
     100: .same(proto: "CHARACTERISTIC_FITZPATRICK_SKIN_TYPE"),
-    101: .same(proto: "CHARACTERISTIC_WHEELCHAIR_USE"),
-    102: .same(proto: "CLINICAL_ALLERGY_RECORD"),
-    103: .same(proto: "CLINICAL_CONDITION_RECORD"),
-    104: .same(proto: "CLINICAL_IMMUNIZATION_RECORD"),
-    105: .same(proto: "CLINICAL_LAB_RESULT_RECORD"),
-    106: .same(proto: "CLINICAL_MEDICATION_RECORD"),
-    107: .same(proto: "CLINICAL_PROCEDURE_RECORD"),
-    108: .same(proto: "CLINICAL_VITAL_SIGN_RECORD"),
-    109: .same(proto: "DOCUMENT_CDA"),
+    101: .same(proto: "CHARACTERISTIC_WHEELCHAIR_USE"),    109: .same(proto: "DOCUMENT_CDA"),
     110: .same(proto: "CORRELATION_BLOOD_PRESSURE"),
     111: .same(proto: "CORRELATION_FOOD"),
   ]
@@ -1382,7 +1322,6 @@ extension HealthData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
     12: .same(proto: "categoryData"),
     13: .same(proto: "workoutData"),
     14: .same(proto: "characteristicData"),
-    15: .same(proto: "clinicalRecordData"),
     16: .same(proto: "documentData"),
     17: .same(proto: "correlationData"),
   ]
@@ -1475,14 +1414,6 @@ extension HealthData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
           }
           try decoder.decodeSingularMessageField(value: &v)
           if let v = v {_storage._specificData = .characteristicData(v)}
-        case 15:
-          var v: ClinicalRecordSpecificData?
-          if let current = _storage._specificData {
-            try decoder.handleConflictingOneOf()
-            if case .clinicalRecordData(let m) = current {v = m}
-          }
-          try decoder.decodeSingularMessageField(value: &v)
-          if let v = v {_storage._specificData = .clinicalRecordData(v)}
         case 16:
           var v: DocumentSpecificData?
           if let current = _storage._specificData {
@@ -1542,8 +1473,6 @@ extension HealthData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
         try visitor.visitSingularMessageField(value: v, fieldNumber: 13)
       case .characteristicData(let v)?:
         try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
-      case .clinicalRecordData(let v)?:
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
       case .documentData(let v)?:
         try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
       case .correlationData(let v)?:
@@ -1772,41 +1701,6 @@ extension CharacteristicSpecificData: SwiftProtobuf.Message, SwiftProtobuf._Mess
 
   static func ==(lhs: CharacteristicSpecificData, rhs: CharacteristicSpecificData) -> Bool {
     if lhs.value != rhs.value {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension ClinicalRecordSpecificData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = "ClinicalRecordSpecificData"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    101: .same(proto: "displayName"),
-    102: .same(proto: "fhirResource"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      switch fieldNumber {
-      case 101: try decoder.decodeSingularStringField(value: &self.displayName)
-      case 102: try decoder.decodeSingularStringField(value: &self.fhirResource)
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.displayName.isEmpty {
-      try visitor.visitSingularStringField(value: self.displayName, fieldNumber: 101)
-    }
-    if !self.fhirResource.isEmpty {
-      try visitor.visitSingularStringField(value: self.fhirResource, fieldNumber: 102)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: ClinicalRecordSpecificData, rhs: ClinicalRecordSpecificData) -> Bool {
-    if lhs.displayName != rhs.displayName {return false}
-    if lhs.fhirResource != rhs.fhirResource {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
