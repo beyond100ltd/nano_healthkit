@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: healthdata.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.7
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use healthTypesDescriptor instead')
 const HealthTypes$json = const {
   '1': 'HealthTypes',
   '2': const [
@@ -110,19 +114,15 @@ const HealthTypes$json = const {
     const {'1': 'CHARACTERISTIC_DATE_OF_BIRTH', '2': 99},
     const {'1': 'CHARACTERISTIC_FITZPATRICK_SKIN_TYPE', '2': 100},
     const {'1': 'CHARACTERISTIC_WHEELCHAIR_USE', '2': 101},
-    const {'1': 'CLINICAL_ALLERGY_RECORD', '2': 102},
-    const {'1': 'CLINICAL_CONDITION_RECORD', '2': 103},
-    const {'1': 'CLINICAL_IMMUNIZATION_RECORD', '2': 104},
-    const {'1': 'CLINICAL_LAB_RESULT_RECORD', '2': 105},
-    const {'1': 'CLINICAL_MEDICATION_RECORD', '2': 106},
-    const {'1': 'CLINICAL_PROCEDURE_RECORD', '2': 107},
-    const {'1': 'CLINICAL_VITAL_SIGN_RECORD', '2': 108},
-    const {'1': 'DOCUMENT_CDA', '2': 109},
-    const {'1': 'CORRELATION_BLOOD_PRESSURE', '2': 110},
-    const {'1': 'CORRELATION_FOOD', '2': 111},
+    const {'1': 'DOCUMENT_CDA', '2': 102},
+    const {'1': 'CORRELATION_BLOOD_PRESSURE', '2': 103},
+    const {'1': 'CORRELATION_FOOD', '2': 104},
   ],
 };
 
+/// Descriptor for `HealthTypes`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List healthTypesDescriptor = $convert.base64Decode('CgtIZWFsdGhUeXBlcxIQCgxXT1JLT1VUX01BSU4QABIbChdDQVRFR09SWV9TTEVFUF9BTkFMWVNJUxABEh0KGUNBVEVHT1JZX0FQUExFX1NUQU5EX0hPVVIQAhIjCh9DQVRFR09SWV9DRVJWSUNBTF9NVUNVU19RVUFMSVRZEAMSIgoeQ0FURUdPUllfT1ZVTEFUSU9OX1RFU1RfUkVTVUxUEAQSGwoXQ0FURUdPUllfTUVOU1RSVUFMX0ZMT1cQBRIkCiBDQVRFR09SWV9JTlRFUk1FTlNUUlVBTF9CTEVFRElORxAGEhwKGENBVEVHT1JZX1NFWFVBTF9BQ1RJVklUWRAHEhwKGENBVEVHT1JZX01JTkRGVUxfU0VTU0lPThAIEiIKHkNBVEVHT1JZX0hJR0hfSEVBUlRfUkFURV9FVkVOVBAJEiEKHUNBVEVHT1JZX0xPV19IRUFSVF9SQVRFX0VWRU5UEAoSKQolQ0FURUdPUllfSVJSRUdVTEFSX0hFQVJUX1JIWVRITV9FVkVOVBALEiEKHUNBVEVHT1JZX0FVRElPX0VYUE9TVVJFX0VWRU5UEAwSIAocQ0FURUdPUllfVE9PVEhCUlVTSElOR19FVkVOVBANEhwKGFFVQU5USVRZX0JPRFlfTUFTU19JTkRFWBAOEiAKHFFVQU5USVRZX0JPRFlfRkFUX1BFUkNFTlRBR0UQDxITCg9RVUFOVElUWV9IRUlHSFQQEBIWChJRVUFOVElUWV9CT0RZX01BU1MQERIbChdRVUFOVElUWV9MRUFOX0JPRFlfTUFTUxASEhcKE1FVQU5USVRZX1NURVBfQ09VTlQQExIlCiFRVUFOVElUWV9ESVNUQU5DRV9XQUxLSU5HX1JVTk5JTkcQFBIdChlRVUFOVElUWV9ESVNUQU5DRV9DWUNMSU5HEBUSIAocUVVBTlRJVFlfQkFTQUxfRU5FUkdZX0JVUk5FRBAWEiEKHVFVQU5USVRZX0FDVElWRV9FTkVSR1lfQlVSTkVEEBcSHAoYUVVBTlRJVFlfRkxJR0hUU19DTElNQkVEEBgSFgoSUVVBTlRJVFlfTklLRV9GVUVMEBkSFwoTUVVBTlRJVFlfSEVBUlRfUkFURRAaEh0KGVFVQU5USVRZX0JPRFlfVEVNUEVSQVRVUkUQGxIjCh9RVUFOVElUWV9CQVNBTF9CT0RZX1RFTVBFUkFUVVJFEBwSJAogUVVBTlRJVFlfQkxPT0RfUFJFU1NVUkVfU1lTVE9MSUMQHRIlCiFRVUFOVElUWV9CTE9PRF9QUkVTU1VSRV9ESUFTVE9MSUMQHhIdChlRVUFOVElUWV9SRVNQSVJBVE9SWV9SQVRFEB8SHgoaUVVBTlRJVFlfT1hZR0VOX1NBVFVSQVRJT04QIBInCiNRVUFOVElUWV9QRVJJUEhFUkFMX1BFUkZVU0lPTl9JTkRFWBAhEhoKFlFVQU5USVRZX0JMT09EX0dMVUNPU0UQIhIjCh9RVUFOVElUWV9OVU1CRVJfT0ZfVElNRVNfRkFMTEVOECMSIwofUVVBTlRJVFlfRUxFQ1RST0RFUk1BTF9BQ1RJVklUWRAkEhoKFlFVQU5USVRZX0lOSEFMRVJfVVNBR0UQJRIiCh5RVUFOVElUWV9CTE9PRF9BTENPSE9MX0NPTlRFTlQQJhIiCh5RVUFOVElUWV9GT1JDRURfVklUQUxfQ0FQQUNJVFkQJxImCiJRVUFOVElUWV9GT1JDRURfRVhQSVJBVE9SWV9WT0xVTUUxECgSJgoiUVVBTlRJVFlfUEVBS19FWFBJUkFUT1JZX0ZMT1dfUkFURRApEh4KGlFVQU5USVRZX0RJRVRBUllfRkFUX1RPVEFMECoSKAokUVVBTlRJVFlfRElFVEFSWV9GQVRfUE9MWVVOU0FUVVJBVEVEECsSKAokUVVBTlRJVFlfRElFVEFSWV9GQVRfTU9OT1VOU0FUVVJBVEVEECwSIgoeUVVBTlRJVFlfRElFVEFSWV9GQVRfU0FUVVJBVEVEEC0SIAocUVVBTlRJVFlfRElFVEFSWV9DSE9MRVNURVJPTBAuEhsKF1FVQU5USVRZX0RJRVRBUllfU09ESVVNEC8SIgoeUVVBTlRJVFlfRElFVEFSWV9DQVJCT0hZRFJBVEVTEDASGgoWUVVBTlRJVFlfRElFVEFSWV9GSUJFUhAxEhoKFlFVQU5USVRZX0RJRVRBUllfU1VHQVIQMhIkCiBRVUFOVElUWV9ESUVUQVJZX0VORVJHWV9DT05TVU1FRBAzEhwKGFFVQU5USVRZX0RJRVRBUllfUFJPVEVJThA0Eh4KGlFVQU5USVRZX0RJRVRBUllfVklUQU1JTl9BEDUSHwobUVVBTlRJVFlfRElFVEFSWV9WSVRBTUlOX0I2EDYSIAocUVVBTlRJVFlfRElFVEFSWV9WSVRBTUlOX0IxMhA3Eh4KGlFVQU5USVRZX0RJRVRBUllfVklUQU1JTl9DEDgSHgoaUVVBTlRJVFlfRElFVEFSWV9WSVRBTUlOX0QQORIeChpRVUFOVElUWV9ESUVUQVJZX1ZJVEFNSU5fRRA6Eh4KGlFVQU5USVRZX0RJRVRBUllfVklUQU1JTl9LEDsSHAoYUVVBTlRJVFlfRElFVEFSWV9DQUxDSVVNEDwSGQoVUVVBTlRJVFlfRElFVEFSWV9JUk9OED0SHAoYUVVBTlRJVFlfRElFVEFSWV9USElBTUlOED4SHwobUVVBTlRJVFlfRElFVEFSWV9SSUJPRkxBVklOED8SGwoXUVVBTlRJVFlfRElFVEFSWV9OSUFDSU4QQBIbChdRVUFOVElUWV9ESUVUQVJZX0ZPTEFURRBBEhsKF1FVQU5USVRZX0RJRVRBUllfQklPVElOEEISJQohUVVBTlRJVFlfRElFVEFSWV9QQU5UT1RIRU5JQ19BQ0lEEEMSHwobUVVBTlRJVFlfRElFVEFSWV9QSE9TUEhPUlVTEEQSGwoXUVVBTlRJVFlfRElFVEFSWV9JT0RJTkUQRRIeChpRVUFOVElUWV9ESUVUQVJZX01BR05FU0lVTRBGEhkKFVFVQU5USVRZX0RJRVRBUllfWklOQxBHEh0KGVFVQU5USVRZX0RJRVRBUllfU0VMRU5JVU0QSBIbChdRVUFOVElUWV9ESUVUQVJZX0NPUFBFUhBJEh4KGlFVQU5USVRZX0RJRVRBUllfTUFOR0FORVNFEEoSHQoZUVVBTlRJVFlfRElFVEFSWV9DSFJPTUlVTRBLEh8KG1FVQU5USVRZX0RJRVRBUllfTU9MWUJERU5VTRBMEh0KGVFVQU5USVRZX0RJRVRBUllfQ0hMT1JJREUQTRIeChpRVUFOVElUWV9ESUVUQVJZX1BPVEFTU0lVTRBOEh0KGVFVQU5USVRZX0RJRVRBUllfQ0FGRkVJTkUQTxIaChZRVUFOVElUWV9ESUVUQVJZX1dBVEVSEFASGAoUUVVBTlRJVFlfVVZfRVhQT1NVUkUQURIgChxRVUFOVElUWV9BUFBMRV9FWEVSQ0lTRV9USU1FEFISIAocUVVBTlRJVFlfRElTVEFOQ0VfV0hFRUxDSEFJUhBTEhcKE1FVQU5USVRZX1BVU0hfQ09VTlQQVBIeChpRVUFOVElUWV9ESVNUQU5DRV9TV0lNTUlORxBVEiIKHlFVQU5USVRZX1NXSU1NSU5HX1NUUk9LRV9DT1VOVBBWEiAKHFFVQU5USVRZX1dBSVNUX0NJUkNVTUZFUkVOQ0UQVxIUChBRVUFOVElUWV9WTzJfTUFYEFgSHwobUVVBTlRJVFlfUkVTVElOR19IRUFSVF9SQVRFEFkSJwojUVVBTlRJVFlfV0FMS0lOR19IRUFSVF9SQVRFX0FWRVJBR0UQWhIoCiRRVUFOVElUWV9IRUFSVF9SQVRFX1ZBUklBQklMSVRZX1NETk4QWxIdChlRVUFOVElUWV9JTlNVTElOX0RFTElWRVJZEFwSKgomUVVBTlRJVFlfRElTVEFOQ0VfRE9XTkhJTExfU05PV19TUE9SVFMQXRIdChlRVUFOVElUWV9BUFBMRV9TVEFORF9USU1FEF4SKQolUVVBTlRJVFlfRU5WSVJPTk1FTlRBTF9BVURJT19FWFBPU1VSRRBfEiUKIVFVQU5USVRZX0hFQURQSE9ORV9BVURJT19FWFBPU1VSRRBgEiEKHUNIQVJBQ1RFUklTVElDX0JJT0xPR0lDQUxfU0VYEGESHQoZQ0hBUkFDVEVSSVNUSUNfQkxPT0RfVFlQRRBiEiAKHENIQVJBQ1RFUklTVElDX0RBVEVfT0ZfQklSVEgQYxIoCiRDSEFSQUNURVJJU1RJQ19GSVRaUEFUUklDS19TS0lOX1RZUEUQZBIhCh1DSEFSQUNURVJJU1RJQ19XSEVFTENIQUlSX1VTRRBlEhAKDERPQ1VNRU5UX0NEQRBmEh4KGkNPUlJFTEFUSU9OX0JMT09EX1BSRVNTVVJFEGcSFAoQQ09SUkVMQVRJT05fRk9PRBBo');
+@$core.Deprecated('Use requestSortingDescriptor instead')
 const RequestSorting$json = const {
   '1': 'RequestSorting',
   '2': const [
@@ -133,6 +133,9 @@ const RequestSorting$json = const {
   ],
 };
 
+/// Descriptor for `RequestSorting`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List requestSortingDescriptor = $convert.base64Decode('Cg5SZXF1ZXN0U29ydGluZxIZChVERVNDRU5ESU5HX1NUQVJUX0RBVEUQABIYChRBU0NFTkRJTkdfU1RBUlRfREFURRABEhYKEkFTQ0VORElOR19FTkRfREFURRACEhcKE0RFU0NFTkRJTkdfRU5EX0RBVEUQAw==');
+@$core.Deprecated('Use statisticsOptionsDescriptor instead')
 const StatisticsOptions$json = const {
   '1': 'StatisticsOptions',
   '2': const [
@@ -146,6 +149,9 @@ const StatisticsOptions$json = const {
   ],
 };
 
+/// Descriptor for `StatisticsOptions`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List statisticsOptionsDescriptor = $convert.base64Decode('ChFTdGF0aXN0aWNzT3B0aW9ucxIUChBESVNDUkVURV9BVkVSQUdFEAASEAoMRElTQ1JFVEVfTUlOEAESEAoMRElTQ1JFVEVfTUFYEAISEgoOQ1VNVUxBVElWRV9TVU0QAxIPCgtNT1NUX1JFQ0VOVBAEEgwKCERVUkFUSU9OEAUSFgoSU0VQQVJBVEVfQllfU09VUkNFEAY=');
+@$core.Deprecated('Use healthTypeListDescriptor instead')
 const HealthTypeList$json = const {
   '1': 'HealthTypeList',
   '2': const [
@@ -153,6 +159,9 @@ const HealthTypeList$json = const {
   ],
 };
 
+/// Descriptor for `HealthTypeList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List healthTypeListDescriptor = $convert.base64Decode('Cg5IZWFsdGhUeXBlTGlzdBIiCgV0eXBlcxgBIAMoDjIMLkhlYWx0aFR5cGVzUgV0eXBlcw==');
+@$core.Deprecated('Use healthDataRequestDescriptor instead')
 const HealthDataRequest$json = const {
   '1': 'HealthDataRequest',
   '2': const [
@@ -165,6 +174,9 @@ const HealthDataRequest$json = const {
   ],
 };
 
+/// Descriptor for `HealthDataRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List healthDataRequestDescriptor = $convert.base64Decode('ChFIZWFsdGhEYXRhUmVxdWVzdBIgCgR0eXBlGAEgASgOMgwuSGVhbHRoVHlwZXNSBHR5cGUSHAoJc3RhcnREYXRlGAIgASgJUglzdGFydERhdGUSGAoHZW5kRGF0ZRgDIAEoCVIHZW5kRGF0ZRIUCgVsaW1pdBgEIAEoBVIFbGltaXQSKQoHc29ydGluZxgFIAEoDjIPLlJlcXVlc3RTb3J0aW5nUgdzb3J0aW5nEhQKBXVuaXRzGAYgAygJUgV1bml0cw==');
+@$core.Deprecated('Use healthDataRequestListDescriptor instead')
 const HealthDataRequestList$json = const {
   '1': 'HealthDataRequestList',
   '2': const [
@@ -172,6 +184,9 @@ const HealthDataRequestList$json = const {
   ],
 };
 
+/// Descriptor for `HealthDataRequestList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List healthDataRequestListDescriptor = $convert.base64Decode('ChVIZWFsdGhEYXRhUmVxdWVzdExpc3QSLgoIcmVxdWVzdHMYASADKAsyEi5IZWFsdGhEYXRhUmVxdWVzdFIIcmVxdWVzdHM=');
+@$core.Deprecated('Use healthDataDescriptor instead')
 const HealthData$json = const {
   '1': 'HealthData',
   '2': const [
@@ -188,15 +203,17 @@ const HealthData$json = const {
     const {'1': 'categoryData', '3': 12, '4': 1, '5': 11, '6': '.CategorySpecificData', '9': 0, '10': 'categoryData'},
     const {'1': 'workoutData', '3': 13, '4': 1, '5': 11, '6': '.WorkoutSpecificData', '9': 0, '10': 'workoutData'},
     const {'1': 'characteristicData', '3': 14, '4': 1, '5': 11, '6': '.CharacteristicSpecificData', '9': 0, '10': 'characteristicData'},
-    const {'1': 'clinicalRecordData', '3': 15, '4': 1, '5': 11, '6': '.ClinicalRecordSpecificData', '9': 0, '10': 'clinicalRecordData'},
-    const {'1': 'documentData', '3': 16, '4': 1, '5': 11, '6': '.DocumentSpecificData', '9': 0, '10': 'documentData'},
-    const {'1': 'correlationData', '3': 17, '4': 1, '5': 11, '6': '.CorrelationSpecificData', '9': 0, '10': 'correlationData'},
+    const {'1': 'documentData', '3': 15, '4': 1, '5': 11, '6': '.DocumentSpecificData', '9': 0, '10': 'documentData'},
+    const {'1': 'correlationData', '3': 16, '4': 1, '5': 11, '6': '.CorrelationSpecificData', '9': 0, '10': 'correlationData'},
   ],
   '8': const [
     const {'1': 'specificData'},
   ],
 };
 
+/// Descriptor for `HealthData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List healthDataDescriptor = $convert.base64Decode('CgpIZWFsdGhEYXRhEiAKBHR5cGUYASABKA4yDC5IZWFsdGhUeXBlc1IEdHlwZRIeCgpvYmplY3RUeXBlGAIgASgJUgpvYmplY3RUeXBlEhwKCXN0YXJ0RGF0ZRgDIAEoCVIJc3RhcnREYXRlEhgKB2VuZERhdGUYBCABKAlSB2VuZERhdGUSFgoGZGV2aWNlGAUgASgJUgZkZXZpY2USGgoIbWV0YWRhdGEYBiABKAlSCG1ldGFkYXRhEhIKBHV1aWQYByABKAlSBHV1aWQSJwoGc291cmNlGAggASgLMg8uU291cmNlUmV2aXNpb25SBnNvdXJjZRIyCgllbXB0eURhdGEYCiABKAsyEi5FbXB0eVNwZWNpZmljRGF0YUgAUgllbXB0eURhdGESOwoMcXVhbnRpdHlEYXRhGAsgASgLMhUuUXVhbnRpdHlTcGVjaWZpY0RhdGFIAFIMcXVhbnRpdHlEYXRhEjsKDGNhdGVnb3J5RGF0YRgMIAEoCzIVLkNhdGVnb3J5U3BlY2lmaWNEYXRhSABSDGNhdGVnb3J5RGF0YRI4Cgt3b3Jrb3V0RGF0YRgNIAEoCzIULldvcmtvdXRTcGVjaWZpY0RhdGFIAFILd29ya291dERhdGESTQoSY2hhcmFjdGVyaXN0aWNEYXRhGA4gASgLMhsuQ2hhcmFjdGVyaXN0aWNTcGVjaWZpY0RhdGFIAFISY2hhcmFjdGVyaXN0aWNEYXRhEjsKDGRvY3VtZW50RGF0YRgPIAEoCzIVLkRvY3VtZW50U3BlY2lmaWNEYXRhSABSDGRvY3VtZW50RGF0YRJECg9jb3JyZWxhdGlvbkRhdGEYECABKAsyGC5Db3JyZWxhdGlvblNwZWNpZmljRGF0YUgAUg9jb3JyZWxhdGlvbkRhdGFCDgoMc3BlY2lmaWNEYXRh');
+@$core.Deprecated('Use healthDataListDescriptor instead')
 const HealthDataList$json = const {
   '1': 'HealthDataList',
   '2': const [
@@ -204,10 +221,16 @@ const HealthDataList$json = const {
   ],
 };
 
+/// Descriptor for `HealthDataList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List healthDataListDescriptor = $convert.base64Decode('Cg5IZWFsdGhEYXRhTGlzdBIfCgRkYXRhGAEgAygLMgsuSGVhbHRoRGF0YVIEZGF0YQ==');
+@$core.Deprecated('Use emptySpecificDataDescriptor instead')
 const EmptySpecificData$json = const {
   '1': 'EmptySpecificData',
 };
 
+/// Descriptor for `EmptySpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List emptySpecificDataDescriptor = $convert.base64Decode('ChFFbXB0eVNwZWNpZmljRGF0YQ==');
+@$core.Deprecated('Use quantitySpecificDataDescriptor instead')
 const QuantitySpecificData$json = const {
   '1': 'QuantitySpecificData',
   '2': const [
@@ -217,6 +240,9 @@ const QuantitySpecificData$json = const {
   ],
 };
 
+/// Descriptor for `QuantitySpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List quantitySpecificDataDescriptor = $convert.base64Decode('ChRRdWFudGl0eVNwZWNpZmljRGF0YRIUCgVjb3VudBhlIAEoA1IFY291bnQSIgoMcXVhbnRpdHlVbml0GGYgASgJUgxxdWFudGl0eVVuaXQSGgoIcXVhbnRpdHkYZyABKAFSCHF1YW50aXR5');
+@$core.Deprecated('Use categorySpecificDataDescriptor instead')
 const CategorySpecificData$json = const {
   '1': 'CategorySpecificData',
   '2': const [
@@ -224,6 +250,9 @@ const CategorySpecificData$json = const {
   ],
 };
 
+/// Descriptor for `CategorySpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List categorySpecificDataDescriptor = $convert.base64Decode('ChRDYXRlZ29yeVNwZWNpZmljRGF0YRIUCgV2YWx1ZRhlIAEoA1IFdmFsdWU=');
+@$core.Deprecated('Use workoutSpecificDataDescriptor instead')
 const WorkoutSpecificData$json = const {
   '1': 'WorkoutSpecificData',
   '2': const [
@@ -235,6 +264,9 @@ const WorkoutSpecificData$json = const {
   ],
 };
 
+/// Descriptor for `WorkoutSpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List workoutSpecificDataDescriptor = $convert.base64Decode('ChNXb3Jrb3V0U3BlY2lmaWNEYXRhEiwKEXRvdGFsRW5lcmd5QnVybmVkGGUgASgBUhF0b3RhbEVuZXJneUJ1cm5lZBI0ChV0b3RhbEVuZXJneUJ1cm5lZFVuaXQYZiABKAlSFXRvdGFsRW5lcmd5QnVybmVkVW5pdBIkCg10b3RhbERpc3RhbmNlGGcgASgBUg10b3RhbERpc3RhbmNlEiwKEXRvdGFsRGlzdGFuY2VVbml0GGggASgJUhF0b3RhbERpc3RhbmNlVW5pdBIaCghkdXJhdGlvbhhpIAEoAVIIZHVyYXRpb24=');
+@$core.Deprecated('Use characteristicSpecificDataDescriptor instead')
 const CharacteristicSpecificData$json = const {
   '1': 'CharacteristicSpecificData',
   '2': const [
@@ -242,6 +274,9 @@ const CharacteristicSpecificData$json = const {
   ],
 };
 
+/// Descriptor for `CharacteristicSpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List characteristicSpecificDataDescriptor = $convert.base64Decode('ChpDaGFyYWN0ZXJpc3RpY1NwZWNpZmljRGF0YRIUCgV2YWx1ZRhlIAEoCVIFdmFsdWU=');
+@$core.Deprecated('Use clinicalRecordSpecificDataDescriptor instead')
 const ClinicalRecordSpecificData$json = const {
   '1': 'ClinicalRecordSpecificData',
   '2': const [
@@ -250,6 +285,9 @@ const ClinicalRecordSpecificData$json = const {
   ],
 };
 
+/// Descriptor for `ClinicalRecordSpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List clinicalRecordSpecificDataDescriptor = $convert.base64Decode('ChpDbGluaWNhbFJlY29yZFNwZWNpZmljRGF0YRIgCgtkaXNwbGF5TmFtZRhlIAEoCVILZGlzcGxheU5hbWUSIgoMZmhpclJlc291cmNlGGYgASgJUgxmaGlyUmVzb3VyY2U=');
+@$core.Deprecated('Use documentSpecificDataDescriptor instead')
 const DocumentSpecificData$json = const {
   '1': 'DocumentSpecificData',
   '2': const [
@@ -261,6 +299,9 @@ const DocumentSpecificData$json = const {
   ],
 };
 
+/// Descriptor for `DocumentSpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List documentSpecificDataDescriptor = $convert.base64Decode('ChREb2N1bWVudFNwZWNpZmljRGF0YRIeCgphdXRob3JOYW1lGGUgASgJUgphdXRob3JOYW1lEiQKDWN1c3RvZGlhbk5hbWUYZiABKAlSDWN1c3RvZGlhbk5hbWUSIgoMZG9jdW1lbnREYXRhGGcgASgJUgxkb2N1bWVudERhdGESIAoLcGF0aWVudE5hbWUYaCABKAlSC3BhdGllbnROYW1lEhQKBXRpdGxlGGkgASgJUgV0aXRsZQ==');
+@$core.Deprecated('Use correlationSpecificDataDescriptor instead')
 const CorrelationSpecificData$json = const {
   '1': 'CorrelationSpecificData',
   '2': const [
@@ -268,6 +309,9 @@ const CorrelationSpecificData$json = const {
   ],
 };
 
+/// Descriptor for `CorrelationSpecificData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List correlationSpecificDataDescriptor = $convert.base64Decode('ChdDb3JyZWxhdGlvblNwZWNpZmljRGF0YRIlCgdvYmplY3RzGGUgAygLMgsuSGVhbHRoRGF0YVIHb2JqZWN0cw==');
+@$core.Deprecated('Use sourceRevisionDescriptor instead')
 const SourceRevision$json = const {
   '1': 'SourceRevision',
   '2': const [
@@ -279,6 +323,9 @@ const SourceRevision$json = const {
   ],
 };
 
+/// Descriptor for `SourceRevision`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sourceRevisionDescriptor = $convert.base64Decode('Cg5Tb3VyY2VSZXZpc2lvbhIYCgd2ZXJzaW9uGGUgASgJUgd2ZXJzaW9uEjYKFm9wZXJhdGluZ1N5c3RlbVZlcnNpb24YZiABKAlSFm9wZXJhdGluZ1N5c3RlbVZlcnNpb24SIAoLcHJvZHVjdFR5cGUYZyABKAlSC3Byb2R1Y3RUeXBlEhIKBG5hbWUYaCABKAlSBG5hbWUSKgoQYnVuZGxlSWRlbnRpZmllchhpIAEoCVIQYnVuZGxlSWRlbnRpZmllcg==');
+@$core.Deprecated('Use statisticsRequestDescriptor instead')
 const StatisticsRequest$json = const {
   '1': 'StatisticsRequest',
   '2': const [
@@ -289,6 +336,9 @@ const StatisticsRequest$json = const {
   ],
 };
 
+/// Descriptor for `StatisticsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List statisticsRequestDescriptor = $convert.base64Decode('ChFTdGF0aXN0aWNzUmVxdWVzdBIgCgR0eXBlGAEgASgOMgwuSGVhbHRoVHlwZXNSBHR5cGUSHAoJc3RhcnREYXRlGAIgASgJUglzdGFydERhdGUSGAoHZW5kRGF0ZRgDIAEoCVIHZW5kRGF0ZRIsCgdvcHRpb25zGAQgAygOMhIuU3RhdGlzdGljc09wdGlvbnNSB29wdGlvbnM=');
+@$core.Deprecated('Use statisticsDataDescriptor instead')
 const StatisticsData$json = const {
   '1': 'StatisticsData',
   '2': const [
@@ -306,6 +356,7 @@ const StatisticsData$json = const {
   '3': const [StatisticsData_StatisticsDataBySource$json, StatisticsData_TimeInterval$json],
 };
 
+@$core.Deprecated('Use statisticsDataDescriptor instead')
 const StatisticsData_StatisticsDataBySource$json = const {
   '1': 'StatisticsDataBySource',
   '2': const [
@@ -314,6 +365,7 @@ const StatisticsData_StatisticsDataBySource$json = const {
   ],
 };
 
+@$core.Deprecated('Use statisticsDataDescriptor instead')
 const StatisticsData_TimeInterval$json = const {
   '1': 'TimeInterval',
   '2': const [
@@ -322,3 +374,5 @@ const StatisticsData_TimeInterval$json = const {
   ],
 };
 
+/// Descriptor for `StatisticsData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List statisticsDataDescriptor = $convert.base64Decode('Cg5TdGF0aXN0aWNzRGF0YRIpCgdzb3VyY2VzGAEgAygLMg8uU291cmNlUmV2aXNpb25SB3NvdXJjZXMSPwoPYXZlcmFnZVF1YW50aXR5GAIgASgLMhUuUXVhbnRpdHlTcGVjaWZpY0RhdGFSD2F2ZXJhZ2VRdWFudGl0eRI/Cg9tYXhpbXVtUXVhbnRpdHkYAyABKAsyFS5RdWFudGl0eVNwZWNpZmljRGF0YVIPbWF4aW11bVF1YW50aXR5Ej8KD21pbmltdW1RdWFudGl0eRgEIAEoCzIVLlF1YW50aXR5U3BlY2lmaWNEYXRhUg9taW5pbXVtUXVhbnRpdHkSNwoLc3VtUXVhbnRpdHkYBSABKAsyFS5RdWFudGl0eVNwZWNpZmljRGF0YVILc3VtUXVhbnRpdHkSMQoIZHVyYXRpb24YBiABKAsyFS5RdWFudGl0eVNwZWNpZmljRGF0YVIIZHVyYXRpb24SRQoSbW9zdFJlY2VudFF1YW50aXR5GAcgASgLMhUuUXVhbnRpdHlTcGVjaWZpY0RhdGFSEm1vc3RSZWNlbnRRdWFudGl0eRJkCh5tb3N0UmVjZW50UXVhbnRpdHlEYXRlSW50ZXJ2YWwYCCABKAsyHC5TdGF0aXN0aWNzRGF0YS5UaW1lSW50ZXJ2YWxSHm1vc3RSZWNlbnRRdWFudGl0eURhdGVJbnRlcnZhbBJACgxkYXRhSW50ZXJ2YWwYCSABKAsyHC5TdGF0aXN0aWNzRGF0YS5UaW1lSW50ZXJ2YWxSDGRhdGFJbnRlcnZhbBJKCgxkYXRhQnlTb3VyY2UYCiADKAsyJi5TdGF0aXN0aWNzRGF0YS5TdGF0aXN0aWNzRGF0YUJ5U291cmNlUgxkYXRhQnlTb3VyY2UaZgoWU3RhdGlzdGljc0RhdGFCeVNvdXJjZRInCgZzb3VyY2UYASABKAsyDy5Tb3VyY2VSZXZpc2lvblIGc291cmNlEiMKBGRhdGEYAiABKAsyDy5TdGF0aXN0aWNzRGF0YVIEZGF0YRpGCgxUaW1lSW50ZXJ2YWwSHAoJc3RhcnREYXRlGAMgASgJUglzdGFydERhdGUSGAoHZW5kRGF0ZRgEIAEoCVIHZW5kRGF0ZQ==');

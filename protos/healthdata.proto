@@ -103,16 +103,9 @@ enum HealthTypes {
    CHARACTERISTIC_DATE_OF_BIRTH = 99;
    CHARACTERISTIC_FITZPATRICK_SKIN_TYPE = 100;
    CHARACTERISTIC_WHEELCHAIR_USE = 101;
-   CLINICAL_ALLERGY_RECORD = 102;
-   CLINICAL_CONDITION_RECORD = 103;
-   CLINICAL_IMMUNIZATION_RECORD = 104;
-   CLINICAL_LAB_RESULT_RECORD = 105;
-   CLINICAL_MEDICATION_RECORD = 106;
-   CLINICAL_PROCEDURE_RECORD = 107;
-   CLINICAL_VITAL_SIGN_RECORD = 108;
-   DOCUMENT_CDA = 109;
-   CORRELATION_BLOOD_PRESSURE = 110;
-   CORRELATION_FOOD = 111;
+   DOCUMENT_CDA = 102;
+   CORRELATION_BLOOD_PRESSURE = 103;
+   CORRELATION_FOOD = 104;
 }
 
 enum RequestSorting {
@@ -155,9 +148,8 @@ message HealthData {
       CategorySpecificData categoryData = 12;
       WorkoutSpecificData workoutData = 13;
       CharacteristicSpecificData characteristicData = 14;
-      ClinicalRecordSpecificData clinicalRecordData = 15;
-      DocumentSpecificData documentData = 16;
-      CorrelationSpecificData correlationData = 17;
+      DocumentSpecificData documentData = 15;
+      CorrelationSpecificData correlationData = 16;
    }
 }
 
