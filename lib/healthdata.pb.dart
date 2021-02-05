@@ -225,12 +225,12 @@ class HealthData extends $pb.GeneratedMessage {
     12 : HealthData_SpecificData.categoryData,
     13 : HealthData_SpecificData.workoutData,
     14 : HealthData_SpecificData.characteristicData,
-    16 : HealthData_SpecificData.documentData,
-    17 : HealthData_SpecificData.correlationData,
+    15 : HealthData_SpecificData.documentData,
+    16 : HealthData_SpecificData.correlationData,
     0 : HealthData_SpecificData.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HealthData', createEmptyInstance: create)
-    ..oo(0, [10, 11, 12, 13, 14, 16, 17])
+    ..oo(0, [10, 11, 12, 13, 14, 15, 16])
     ..e<HealthTypes>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: HealthTypes.WORKOUT_MAIN, valueOf: HealthTypes.valueOf, enumValues: HealthTypes.values)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'objectType', protoName: 'objectType')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startDate', protoName: 'startDate')
@@ -244,8 +244,8 @@ class HealthData extends $pb.GeneratedMessage {
     ..aOM<CategorySpecificData>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'categoryData', protoName: 'categoryData', subBuilder: CategorySpecificData.create)
     ..aOM<WorkoutSpecificData>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'workoutData', protoName: 'workoutData', subBuilder: WorkoutSpecificData.create)
     ..aOM<CharacteristicSpecificData>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'characteristicData', protoName: 'characteristicData', subBuilder: CharacteristicSpecificData.create)
-    ..aOM<DocumentSpecificData>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'documentData', protoName: 'documentData', subBuilder: DocumentSpecificData.create)
-    ..aOM<CorrelationSpecificData>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'correlationData', protoName: 'correlationData', subBuilder: CorrelationSpecificData.create)
+    ..aOM<DocumentSpecificData>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'documentData', protoName: 'documentData', subBuilder: DocumentSpecificData.create)
+    ..aOM<CorrelationSpecificData>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'correlationData', protoName: 'correlationData', subBuilder: CorrelationSpecificData.create)
     ..hasRequiredFields = false
   ;
 
@@ -468,26 +468,26 @@ class HealthData extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   CharacteristicSpecificData ensureCharacteristicData() => $_ensure(12);
 
-  @$pb.TagNumber(16)
+  @$pb.TagNumber(15)
   DocumentSpecificData get documentData => $_getN(13);
-  @$pb.TagNumber(16)
-  set documentData(DocumentSpecificData v) { setField(16, v); }
-  @$pb.TagNumber(16)
+  @$pb.TagNumber(15)
+  set documentData(DocumentSpecificData v) { setField(15, v); }
+  @$pb.TagNumber(15)
   $core.bool hasDocumentData() => $_has(13);
-  @$pb.TagNumber(16)
-  void clearDocumentData() => clearField(16);
-  @$pb.TagNumber(16)
+  @$pb.TagNumber(15)
+  void clearDocumentData() => clearField(15);
+  @$pb.TagNumber(15)
   DocumentSpecificData ensureDocumentData() => $_ensure(13);
 
-  @$pb.TagNumber(17)
+  @$pb.TagNumber(16)
   CorrelationSpecificData get correlationData => $_getN(14);
-  @$pb.TagNumber(17)
-  set correlationData(CorrelationSpecificData v) { setField(17, v); }
-  @$pb.TagNumber(17)
+  @$pb.TagNumber(16)
+  set correlationData(CorrelationSpecificData v) { setField(16, v); }
+  @$pb.TagNumber(16)
   $core.bool hasCorrelationData() => $_has(14);
-  @$pb.TagNumber(17)
-  void clearCorrelationData() => clearField(17);
-  @$pb.TagNumber(17)
+  @$pb.TagNumber(16)
+  void clearCorrelationData() => clearField(16);
+  @$pb.TagNumber(16)
   CorrelationSpecificData ensureCorrelationData() => $_ensure(14);
 }
 

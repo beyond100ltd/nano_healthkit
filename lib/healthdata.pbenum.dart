@@ -112,9 +112,9 @@ class HealthTypes extends $pb.ProtobufEnum {
   static const HealthTypes CHARACTERISTIC_DATE_OF_BIRTH = HealthTypes._(99, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CHARACTERISTIC_DATE_OF_BIRTH');
   static const HealthTypes CHARACTERISTIC_FITZPATRICK_SKIN_TYPE = HealthTypes._(100, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CHARACTERISTIC_FITZPATRICK_SKIN_TYPE');
   static const HealthTypes CHARACTERISTIC_WHEELCHAIR_USE = HealthTypes._(101, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CHARACTERISTIC_WHEELCHAIR_USE');
-  static const HealthTypes DOCUMENT_CDA = HealthTypes._(109, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DOCUMENT_CDA');
-  static const HealthTypes CORRELATION_BLOOD_PRESSURE = HealthTypes._(110, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CORRELATION_BLOOD_PRESSURE');
-  static const HealthTypes CORRELATION_FOOD = HealthTypes._(111, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CORRELATION_FOOD');
+  static const HealthTypes DOCUMENT_CDA = HealthTypes._(102, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DOCUMENT_CDA');
+  static const HealthTypes CORRELATION_BLOOD_PRESSURE = HealthTypes._(103, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CORRELATION_BLOOD_PRESSURE');
+  static const HealthTypes CORRELATION_FOOD = HealthTypes._(104, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CORRELATION_FOOD');
 
   static const $core.List<HealthTypes> values = <HealthTypes> [
     WORKOUT_MAIN,

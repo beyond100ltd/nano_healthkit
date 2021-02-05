@@ -124,9 +124,9 @@ enum HealthTypes: SwiftProtobuf.Enum {
   case characteristicDateOfBirth // = 99
   case characteristicFitzpatrickSkinType // = 100
   case characteristicWheelchairUse // = 101
-  case documentCda // = 109
-  case correlationBloodPressure // = 110
-  case correlationFood // = 111
+  case documentCda // = 102
+  case correlationBloodPressure // = 103
+  case correlationFood // = 104
   case UNRECOGNIZED(Int)
 
   init() {
@@ -237,9 +237,9 @@ enum HealthTypes: SwiftProtobuf.Enum {
     case 99: self = .characteristicDateOfBirth
     case 100: self = .characteristicFitzpatrickSkinType
     case 101: self = .characteristicWheelchairUse
-    case 109: self = .documentCda
-    case 110: self = .correlationBloodPressure
-    case 111: self = .correlationFood
+    case 102: self = .documentCda
+    case 103: self = .correlationBloodPressure
+    case 104: self = .correlationFood
     default: self = .UNRECOGNIZED(rawValue)
     }
   }
@@ -348,9 +348,9 @@ enum HealthTypes: SwiftProtobuf.Enum {
     case .characteristicDateOfBirth: return 99
     case .characteristicFitzpatrickSkinType: return 100
     case .characteristicWheelchairUse: return 101
-    case .documentCda: return 109
-    case .correlationBloodPressure: return 110
-    case .correlationFood: return 111
+    case .documentCda: return 102
+    case .correlationBloodPressure: return 103
+    case .correlationFood: return 104
     case .UNRECOGNIZED(let i): return i
     }
   }
@@ -1189,9 +1189,9 @@ extension HealthTypes: SwiftProtobuf._ProtoNameProviding {
     99: .same(proto: "CHARACTERISTIC_DATE_OF_BIRTH"),
     100: .same(proto: "CHARACTERISTIC_FITZPATRICK_SKIN_TYPE"),
     101: .same(proto: "CHARACTERISTIC_WHEELCHAIR_USE"),
-    109: .same(proto: "DOCUMENT_CDA"),
-    110: .same(proto: "CORRELATION_BLOOD_PRESSURE"),
-    111: .same(proto: "CORRELATION_FOOD"),
+    102: .same(proto: "DOCUMENT_CDA"),
+    103: .same(proto: "CORRELATION_BLOOD_PRESSURE"),
+    104: .same(proto: "CORRELATION_FOOD"),
   ]
 }
 
@@ -1358,8 +1358,8 @@ extension HealthData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
     12: .same(proto: "categoryData"),
     13: .same(proto: "workoutData"),
     14: .same(proto: "characteristicData"),
-    16: .same(proto: "documentData"),
-    17: .same(proto: "correlationData"),
+    15: .same(proto: "documentData"),
+    16: .same(proto: "correlationData"),
   ]
 
   fileprivate class _StorageClass {
@@ -1458,7 +1458,7 @@ extension HealthData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
           try decoder.decodeSingularMessageField(value: &v)
           if let v = v {_storage._specificData = .characteristicData(v)}
         }()
-        case 16: try {
+        case 15: try {
           var v: DocumentSpecificData?
           if let current = _storage._specificData {
             try decoder.handleConflictingOneOf()
@@ -1467,7 +1467,7 @@ extension HealthData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
           try decoder.decodeSingularMessageField(value: &v)
           if let v = v {_storage._specificData = .documentData(v)}
         }()
-        case 17: try {
+        case 16: try {
           var v: CorrelationSpecificData?
           if let current = _storage._specificData {
             try decoder.handleConflictingOneOf()
@@ -1534,11 +1534,11 @@ extension HealthData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
       }()
       case .documentData?: try {
         guard case .documentData(let v)? = _storage._specificData else { preconditionFailure() }
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
       }()
       case .correlationData?: try {
         guard case .correlationData(let v)? = _storage._specificData else { preconditionFailure() }
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 17)
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
       }()
       case nil: break
       }
