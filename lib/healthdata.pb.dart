@@ -833,6 +833,67 @@ class CharacteristicSpecificData extends $pb.GeneratedMessage {
   void clearValue() => clearField(101);
 }
 
+class ClinicalRecordSpecificData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ClinicalRecordSpecificData', createEmptyInstance: create)
+    ..aOS(101, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'displayName', protoName: 'displayName')
+    ..aOS(102, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fhirResource', protoName: 'fhirResource')
+    ..hasRequiredFields = false
+  ;
+
+  ClinicalRecordSpecificData._() : super();
+  factory ClinicalRecordSpecificData({
+    $core.String displayName,
+    $core.String fhirResource,
+  }) {
+    final _result = create();
+    if (displayName != null) {
+      _result.displayName = displayName;
+    }
+    if (fhirResource != null) {
+      _result.fhirResource = fhirResource;
+    }
+    return _result;
+  }
+  factory ClinicalRecordSpecificData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ClinicalRecordSpecificData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ClinicalRecordSpecificData clone() => ClinicalRecordSpecificData()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ClinicalRecordSpecificData copyWith(void Function(ClinicalRecordSpecificData) updates) => super.copyWith((message) => updates(message as ClinicalRecordSpecificData)) as ClinicalRecordSpecificData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ClinicalRecordSpecificData create() => ClinicalRecordSpecificData._();
+  ClinicalRecordSpecificData createEmptyInstance() => create();
+  static $pb.PbList<ClinicalRecordSpecificData> createRepeated() => $pb.PbList<ClinicalRecordSpecificData>();
+  @$core.pragma('dart2js:noInline')
+  static ClinicalRecordSpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ClinicalRecordSpecificData>(create);
+  static ClinicalRecordSpecificData _defaultInstance;
+
+  @$pb.TagNumber(101)
+  $core.String get displayName => $_getSZ(0);
+  @$pb.TagNumber(101)
+  set displayName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(101)
+  $core.bool hasDisplayName() => $_has(0);
+  @$pb.TagNumber(101)
+  void clearDisplayName() => clearField(101);
+
+  @$pb.TagNumber(102)
+  $core.String get fhirResource => $_getSZ(1);
+  @$pb.TagNumber(102)
+  set fhirResource($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(102)
+  $core.bool hasFhirResource() => $_has(1);
+  @$pb.TagNumber(102)
+  void clearFhirResource() => clearField(102);
+}
+
 class DocumentSpecificData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DocumentSpecificData', createEmptyInstance: create)
     ..aOS(101, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authorName', protoName: 'authorName')
