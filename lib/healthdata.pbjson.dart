@@ -276,17 +276,6 @@ const CharacteristicSpecificData$json = const {
 
 /// Descriptor for `CharacteristicSpecificData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List characteristicSpecificDataDescriptor = $convert.base64Decode('ChpDaGFyYWN0ZXJpc3RpY1NwZWNpZmljRGF0YRIUCgV2YWx1ZRhlIAEoCVIFdmFsdWU=');
-@$core.Deprecated('Use clinicalRecordSpecificDataDescriptor instead')
-const ClinicalRecordSpecificData$json = const {
-  '1': 'ClinicalRecordSpecificData',
-  '2': const [
-    const {'1': 'displayName', '3': 101, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'fhirResource', '3': 102, '4': 1, '5': 9, '10': 'fhirResource'},
-  ],
-};
-
-/// Descriptor for `ClinicalRecordSpecificData`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List clinicalRecordSpecificDataDescriptor = $convert.base64Decode('ChpDbGluaWNhbFJlY29yZFNwZWNpZmljRGF0YRIgCgtkaXNwbGF5TmFtZRhlIAEoCVILZGlzcGxheU5hbWUSIgoMZmhpclJlc291cmNlGGYgASgJUgxmaGlyUmVzb3VyY2U=');
 @$core.Deprecated('Use documentSpecificDataDescriptor instead')
 const DocumentSpecificData$json = const {
   '1': 'DocumentSpecificData',
