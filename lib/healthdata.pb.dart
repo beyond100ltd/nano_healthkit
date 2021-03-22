@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: healthdata.proto
 //
-// @dart = 2.7
+
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -22,7 +22,7 @@ class HealthTypeList extends $pb.GeneratedMessage {
 
   HealthTypeList._() : super();
   factory HealthTypeList({
-    $core.Iterable<HealthTypes> types,
+    $core.Iterable<HealthTypes>? types,
   }) {
     final _result = create();
     if (types != null) {
@@ -49,7 +49,7 @@ class HealthTypeList extends $pb.GeneratedMessage {
   static $pb.PbList<HealthTypeList> createRepeated() => $pb.PbList<HealthTypeList>();
   @$core.pragma('dart2js:noInline')
   static HealthTypeList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HealthTypeList>(create);
-  static HealthTypeList _defaultInstance;
+  static HealthTypeList? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<HealthTypes> get types => $_getList(0);
@@ -68,12 +68,12 @@ class HealthDataRequest extends $pb.GeneratedMessage {
 
   HealthDataRequest._() : super();
   factory HealthDataRequest({
-    HealthTypes type,
-    $core.String startDate,
-    $core.String endDate,
-    $core.int limit,
-    RequestSorting sorting,
-    $core.Iterable<$core.String> units,
+    HealthTypes? type,
+    $core.String? startDate,
+    $core.String? endDate,
+    $core.int? limit,
+    RequestSorting? sorting,
+    $core.Iterable<$core.String>? units,
   }) {
     final _result = create();
     if (type != null) {
@@ -115,7 +115,7 @@ class HealthDataRequest extends $pb.GeneratedMessage {
   static $pb.PbList<HealthDataRequest> createRepeated() => $pb.PbList<HealthDataRequest>();
   @$core.pragma('dart2js:noInline')
   static HealthDataRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HealthDataRequest>(create);
-  static HealthDataRequest _defaultInstance;
+  static HealthDataRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   HealthTypes get type => $_getN(0);
@@ -174,7 +174,7 @@ class HealthDataRequestList extends $pb.GeneratedMessage {
 
   HealthDataRequestList._() : super();
   factory HealthDataRequestList({
-    $core.Iterable<HealthDataRequest> requests,
+    $core.Iterable<HealthDataRequest>? requests,
   }) {
     final _result = create();
     if (requests != null) {
@@ -201,7 +201,7 @@ class HealthDataRequestList extends $pb.GeneratedMessage {
   static $pb.PbList<HealthDataRequestList> createRepeated() => $pb.PbList<HealthDataRequestList>();
   @$core.pragma('dart2js:noInline')
   static HealthDataRequestList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HealthDataRequestList>(create);
-  static HealthDataRequestList _defaultInstance;
+  static HealthDataRequestList? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<HealthDataRequest> get requests => $_getList(0);
@@ -251,21 +251,21 @@ class HealthData extends $pb.GeneratedMessage {
 
   HealthData._() : super();
   factory HealthData({
-    HealthTypes type,
-    $core.String objectType,
-    $core.String startDate,
-    $core.String endDate,
-    $core.String device,
-    $core.String metadata,
-    $core.String uuid,
-    SourceRevision source,
-    EmptySpecificData emptyData,
-    QuantitySpecificData quantityData,
-    CategorySpecificData categoryData,
-    WorkoutSpecificData workoutData,
-    CharacteristicSpecificData characteristicData,
-    DocumentSpecificData documentData,
-    CorrelationSpecificData correlationData,
+    HealthTypes? type,
+    $core.String? objectType,
+    $core.String? startDate,
+    $core.String? endDate,
+    $core.String? device,
+    $core.String? metadata,
+    $core.String? uuid,
+    SourceRevision? source,
+    EmptySpecificData? emptyData,
+    QuantitySpecificData? quantityData,
+    CategorySpecificData? categoryData,
+    WorkoutSpecificData? workoutData,
+    CharacteristicSpecificData? characteristicData,
+    DocumentSpecificData? documentData,
+    CorrelationSpecificData? correlationData,
   }) {
     final _result = create();
     if (type != null) {
@@ -334,9 +334,9 @@ class HealthData extends $pb.GeneratedMessage {
   static $pb.PbList<HealthData> createRepeated() => $pb.PbList<HealthData>();
   @$core.pragma('dart2js:noInline')
   static HealthData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HealthData>(create);
-  static HealthData _defaultInstance;
+  static HealthData? _defaultInstance;
 
-  HealthData_SpecificData whichSpecificData() => _HealthData_SpecificDataByTag[$_whichOneof(0)];
+  HealthData_SpecificData? whichSpecificData() => _HealthData_SpecificDataByTag[$_whichOneof(0)];
   void clearSpecificData() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -499,7 +499,7 @@ class HealthDataList extends $pb.GeneratedMessage {
 
   HealthDataList._() : super();
   factory HealthDataList({
-    $core.Iterable<HealthData> data,
+    $core.Iterable<HealthData>? data,
   }) {
     final _result = create();
     if (data != null) {
@@ -526,7 +526,7 @@ class HealthDataList extends $pb.GeneratedMessage {
   static $pb.PbList<HealthDataList> createRepeated() => $pb.PbList<HealthDataList>();
   @$core.pragma('dart2js:noInline')
   static HealthDataList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HealthDataList>(create);
-  static HealthDataList _defaultInstance;
+  static HealthDataList? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<HealthData> get data => $_getList(0);
@@ -558,7 +558,7 @@ class EmptySpecificData extends $pb.GeneratedMessage {
   static $pb.PbList<EmptySpecificData> createRepeated() => $pb.PbList<EmptySpecificData>();
   @$core.pragma('dart2js:noInline')
   static EmptySpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EmptySpecificData>(create);
-  static EmptySpecificData _defaultInstance;
+  static EmptySpecificData? _defaultInstance;
 }
 
 class QuantitySpecificData extends $pb.GeneratedMessage {
@@ -571,9 +571,9 @@ class QuantitySpecificData extends $pb.GeneratedMessage {
 
   QuantitySpecificData._() : super();
   factory QuantitySpecificData({
-    $fixnum.Int64 count,
-    $core.String quantityUnit,
-    $core.double quantity,
+    $fixnum.Int64? count,
+    $core.String? quantityUnit,
+    $core.double? quantity,
   }) {
     final _result = create();
     if (count != null) {
@@ -606,7 +606,7 @@ class QuantitySpecificData extends $pb.GeneratedMessage {
   static $pb.PbList<QuantitySpecificData> createRepeated() => $pb.PbList<QuantitySpecificData>();
   @$core.pragma('dart2js:noInline')
   static QuantitySpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QuantitySpecificData>(create);
-  static QuantitySpecificData _defaultInstance;
+  static QuantitySpecificData? _defaultInstance;
 
   @$pb.TagNumber(101)
   $fixnum.Int64 get count => $_getI64(0);
@@ -644,7 +644,7 @@ class CategorySpecificData extends $pb.GeneratedMessage {
 
   CategorySpecificData._() : super();
   factory CategorySpecificData({
-    $fixnum.Int64 value,
+    $fixnum.Int64? value,
   }) {
     final _result = create();
     if (value != null) {
@@ -671,7 +671,7 @@ class CategorySpecificData extends $pb.GeneratedMessage {
   static $pb.PbList<CategorySpecificData> createRepeated() => $pb.PbList<CategorySpecificData>();
   @$core.pragma('dart2js:noInline')
   static CategorySpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CategorySpecificData>(create);
-  static CategorySpecificData _defaultInstance;
+  static CategorySpecificData? _defaultInstance;
 
   @$pb.TagNumber(101)
   $fixnum.Int64 get value => $_getI64(0);
@@ -695,11 +695,11 @@ class WorkoutSpecificData extends $pb.GeneratedMessage {
 
   WorkoutSpecificData._() : super();
   factory WorkoutSpecificData({
-    $core.double totalEnergyBurned,
-    $core.String totalEnergyBurnedUnit,
-    $core.double totalDistance,
-    $core.String totalDistanceUnit,
-    $core.double duration,
+    $core.double? totalEnergyBurned,
+    $core.String? totalEnergyBurnedUnit,
+    $core.double? totalDistance,
+    $core.String? totalDistanceUnit,
+    $core.double? duration,
   }) {
     final _result = create();
     if (totalEnergyBurned != null) {
@@ -738,7 +738,7 @@ class WorkoutSpecificData extends $pb.GeneratedMessage {
   static $pb.PbList<WorkoutSpecificData> createRepeated() => $pb.PbList<WorkoutSpecificData>();
   @$core.pragma('dart2js:noInline')
   static WorkoutSpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WorkoutSpecificData>(create);
-  static WorkoutSpecificData _defaultInstance;
+  static WorkoutSpecificData? _defaultInstance;
 
   @$pb.TagNumber(101)
   $core.double get totalEnergyBurned => $_getN(0);
@@ -794,7 +794,7 @@ class CharacteristicSpecificData extends $pb.GeneratedMessage {
 
   CharacteristicSpecificData._() : super();
   factory CharacteristicSpecificData({
-    $core.String value,
+    $core.String? value,
   }) {
     final _result = create();
     if (value != null) {
@@ -821,7 +821,7 @@ class CharacteristicSpecificData extends $pb.GeneratedMessage {
   static $pb.PbList<CharacteristicSpecificData> createRepeated() => $pb.PbList<CharacteristicSpecificData>();
   @$core.pragma('dart2js:noInline')
   static CharacteristicSpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CharacteristicSpecificData>(create);
-  static CharacteristicSpecificData _defaultInstance;
+  static CharacteristicSpecificData? _defaultInstance;
 
   @$pb.TagNumber(101)
   $core.String get value => $_getSZ(0);
@@ -845,11 +845,11 @@ class DocumentSpecificData extends $pb.GeneratedMessage {
 
   DocumentSpecificData._() : super();
   factory DocumentSpecificData({
-    $core.String authorName,
-    $core.String custodianName,
-    $core.String documentData,
-    $core.String patientName,
-    $core.String title,
+    $core.String? authorName,
+    $core.String? custodianName,
+    $core.String? documentData,
+    $core.String? patientName,
+    $core.String? title,
   }) {
     final _result = create();
     if (authorName != null) {
@@ -888,7 +888,7 @@ class DocumentSpecificData extends $pb.GeneratedMessage {
   static $pb.PbList<DocumentSpecificData> createRepeated() => $pb.PbList<DocumentSpecificData>();
   @$core.pragma('dart2js:noInline')
   static DocumentSpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DocumentSpecificData>(create);
-  static DocumentSpecificData _defaultInstance;
+  static DocumentSpecificData? _defaultInstance;
 
   @$pb.TagNumber(101)
   $core.String get authorName => $_getSZ(0);
@@ -944,7 +944,7 @@ class CorrelationSpecificData extends $pb.GeneratedMessage {
 
   CorrelationSpecificData._() : super();
   factory CorrelationSpecificData({
-    $core.Iterable<HealthData> objects,
+    $core.Iterable<HealthData>? objects,
   }) {
     final _result = create();
     if (objects != null) {
@@ -971,7 +971,7 @@ class CorrelationSpecificData extends $pb.GeneratedMessage {
   static $pb.PbList<CorrelationSpecificData> createRepeated() => $pb.PbList<CorrelationSpecificData>();
   @$core.pragma('dart2js:noInline')
   static CorrelationSpecificData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CorrelationSpecificData>(create);
-  static CorrelationSpecificData _defaultInstance;
+  static CorrelationSpecificData? _defaultInstance;
 
   @$pb.TagNumber(101)
   $core.List<HealthData> get objects => $_getList(0);
@@ -989,11 +989,11 @@ class SourceRevision extends $pb.GeneratedMessage {
 
   SourceRevision._() : super();
   factory SourceRevision({
-    $core.String version,
-    $core.String operatingSystemVersion,
-    $core.String productType,
-    $core.String name,
-    $core.String bundleIdentifier,
+    $core.String? version,
+    $core.String? operatingSystemVersion,
+    $core.String? productType,
+    $core.String? name,
+    $core.String? bundleIdentifier,
   }) {
     final _result = create();
     if (version != null) {
@@ -1032,7 +1032,7 @@ class SourceRevision extends $pb.GeneratedMessage {
   static $pb.PbList<SourceRevision> createRepeated() => $pb.PbList<SourceRevision>();
   @$core.pragma('dart2js:noInline')
   static SourceRevision getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SourceRevision>(create);
-  static SourceRevision _defaultInstance;
+  static SourceRevision? _defaultInstance;
 
   @$pb.TagNumber(101)
   $core.String get version => $_getSZ(0);
@@ -1091,10 +1091,10 @@ class StatisticsRequest extends $pb.GeneratedMessage {
 
   StatisticsRequest._() : super();
   factory StatisticsRequest({
-    HealthTypes type,
-    $core.String startDate,
-    $core.String endDate,
-    $core.Iterable<StatisticsOptions> options,
+    HealthTypes? type,
+    $core.String? startDate,
+    $core.String? endDate,
+    $core.Iterable<StatisticsOptions>? options,
   }) {
     final _result = create();
     if (type != null) {
@@ -1130,7 +1130,7 @@ class StatisticsRequest extends $pb.GeneratedMessage {
   static $pb.PbList<StatisticsRequest> createRepeated() => $pb.PbList<StatisticsRequest>();
   @$core.pragma('dart2js:noInline')
   static StatisticsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StatisticsRequest>(create);
-  static StatisticsRequest _defaultInstance;
+  static StatisticsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   HealthTypes get type => $_getN(0);
@@ -1172,8 +1172,8 @@ class StatisticsData_StatisticsDataBySource extends $pb.GeneratedMessage {
 
   StatisticsData_StatisticsDataBySource._() : super();
   factory StatisticsData_StatisticsDataBySource({
-    SourceRevision source,
-    StatisticsData data,
+    SourceRevision? source,
+    StatisticsData? data,
   }) {
     final _result = create();
     if (source != null) {
@@ -1203,7 +1203,7 @@ class StatisticsData_StatisticsDataBySource extends $pb.GeneratedMessage {
   static $pb.PbList<StatisticsData_StatisticsDataBySource> createRepeated() => $pb.PbList<StatisticsData_StatisticsDataBySource>();
   @$core.pragma('dart2js:noInline')
   static StatisticsData_StatisticsDataBySource getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StatisticsData_StatisticsDataBySource>(create);
-  static StatisticsData_StatisticsDataBySource _defaultInstance;
+  static StatisticsData_StatisticsDataBySource? _defaultInstance;
 
   @$pb.TagNumber(1)
   SourceRevision get source => $_getN(0);
@@ -1237,8 +1237,8 @@ class StatisticsData_TimeInterval extends $pb.GeneratedMessage {
 
   StatisticsData_TimeInterval._() : super();
   factory StatisticsData_TimeInterval({
-    $core.String startDate,
-    $core.String endDate,
+    $core.String? startDate,
+    $core.String? endDate,
   }) {
     final _result = create();
     if (startDate != null) {
@@ -1268,7 +1268,7 @@ class StatisticsData_TimeInterval extends $pb.GeneratedMessage {
   static $pb.PbList<StatisticsData_TimeInterval> createRepeated() => $pb.PbList<StatisticsData_TimeInterval>();
   @$core.pragma('dart2js:noInline')
   static StatisticsData_TimeInterval getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StatisticsData_TimeInterval>(create);
-  static StatisticsData_TimeInterval _defaultInstance;
+  static StatisticsData_TimeInterval? _defaultInstance;
 
   @$pb.TagNumber(3)
   $core.String get startDate => $_getSZ(0);
@@ -1306,16 +1306,16 @@ class StatisticsData extends $pb.GeneratedMessage {
 
   StatisticsData._() : super();
   factory StatisticsData({
-    $core.Iterable<SourceRevision> sources,
-    QuantitySpecificData averageQuantity,
-    QuantitySpecificData maximumQuantity,
-    QuantitySpecificData minimumQuantity,
-    QuantitySpecificData sumQuantity,
-    QuantitySpecificData duration,
-    QuantitySpecificData mostRecentQuantity,
-    StatisticsData_TimeInterval mostRecentQuantityDateInterval,
-    StatisticsData_TimeInterval dataInterval,
-    $core.Iterable<StatisticsData_StatisticsDataBySource> dataBySource,
+    $core.Iterable<SourceRevision>? sources,
+    QuantitySpecificData? averageQuantity,
+    QuantitySpecificData? maximumQuantity,
+    QuantitySpecificData? minimumQuantity,
+    QuantitySpecificData? sumQuantity,
+    QuantitySpecificData? duration,
+    QuantitySpecificData? mostRecentQuantity,
+    StatisticsData_TimeInterval? mostRecentQuantityDateInterval,
+    StatisticsData_TimeInterval? dataInterval,
+    $core.Iterable<StatisticsData_StatisticsDataBySource>? dataBySource,
   }) {
     final _result = create();
     if (sources != null) {
@@ -1369,7 +1369,7 @@ class StatisticsData extends $pb.GeneratedMessage {
   static $pb.PbList<StatisticsData> createRepeated() => $pb.PbList<StatisticsData>();
   @$core.pragma('dart2js:noInline')
   static StatisticsData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StatisticsData>(create);
-  static StatisticsData _defaultInstance;
+  static StatisticsData? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<SourceRevision> get sources => $_getList(0);

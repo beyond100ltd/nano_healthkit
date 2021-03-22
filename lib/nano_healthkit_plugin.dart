@@ -10,7 +10,7 @@ class NanoHealthkitPlugin {
   static const _channel = const MethodChannel('nano_healthkit_plugin');
   static const _stream = const EventChannel('nano_healthkit_plugin_stream');
   static var _subscriberMethod;
-  static StreamSubscription _subscription;
+  static StreamSubscription? _subscription;
 
   /// Initialize the plugin and request relevant permissions from the user.
   static Future<void> initialize<T>(void onData(T event)) async {
@@ -21,7 +21,7 @@ class NanoHealthkitPlugin {
   /// Requests permissions
   ///
   /// Desired health types to request permissions are indicated in the [request].
-  static Future<bool> authorize(HealthTypeList request) async {
+  static Future<bool?> authorize(HealthTypeList request) async {
     return await _channel.invokeMethod(
         'requestPermissions', request.writeToBuffer());
   }
@@ -32,8 +32,8 @@ class NanoHealthkitPlugin {
   /// Returns the valid types.
   static Future<HealthTypeList> filterExistingTypes(
       HealthTypeList request) async {
-    final Uint8List rawData = await _channel.invokeMethod(
-        'filterExistingTypes', request.writeToBuffer());
+    final Uint8List rawData = await (_channel.invokeMethod(
+        'filterExistingTypes', request.writeToBuffer()) as FutureOr<Uint8List>);
     return HealthTypeList.fromBuffer(rawData);
   }
 
@@ -44,7 +44,7 @@ class NanoHealthkitPlugin {
   /// dates are indicated, it will fetch all historical data for that type.
   static Future<HealthDataList> fetchData(HealthDataRequest request) async {
     final Uint8List rawData =
-        await _channel.invokeMethod('fetchData', request.writeToBuffer());
+        await (_channel.invokeMethod('fetchData', request.writeToBuffer()) as FutureOr<Uint8List>);
     return HealthDataList.fromBuffer(rawData);
   }
 
@@ -55,7 +55,7 @@ class NanoHealthkitPlugin {
   static Future<HealthDataList> fetchBatchData(
       HealthDataRequestList request) async {
     final Uint8List rawData =
-        await _channel.invokeMethod('fetchBatchData', request.writeToBuffer());
+        await (_channel.invokeMethod('fetchBatchData', request.writeToBuffer()) as FutureOr<Uint8List>);
     return HealthDataList.fromBuffer(rawData);
   }
 
@@ -64,7 +64,7 @@ class NanoHealthkitPlugin {
   /// Only subscribes to types indicated in [request]. The method in [onData]
   /// gets called on each new available data in a ``HealthDataList`` object.
   static void subscribeToUpdates<T>(
-      HealthTypeList request, void onData(T event)) {
+      HealthTypeList? request, void onData(T event)) {
     _subscriberMethod = onData;
     _subscription?.cancel();
     _subscription = _stream
@@ -77,7 +77,7 @@ class NanoHealthkitPlugin {
   /// Does not receive a list of types, instead it unsubscribes from all possible
   /// types of health data. [stream] needs to be the object that the subscription
   /// method returns.
-  static Future<bool> unsubscribeToUpdates() async {
+  static Future<bool?> unsubscribeToUpdates() async {
     _subscription?.cancel();
     _subscription = null;
     _subscriberMethod = null;
@@ -88,7 +88,7 @@ class NanoHealthkitPlugin {
   ///
   /// Specially useful to keep track of the subscriptions probably done during
   /// another session.
-  static Future<bool> isSubscribedToUpdates() async {
+  static Future<bool?> isSubscribedToUpdates() async {
     return await _channel.invokeMethod('isSubscribedToUpdates');
   }
 
@@ -105,8 +105,8 @@ class NanoHealthkitPlugin {
   /// Apple's doc for more information regarding HKStatisticsQuery.
   static Future<StatisticsData> fetchStatisticsData(
       StatisticsRequest request) async {
-    final Uint8List rawData = await _channel.invokeMethod(
-        'fetchStatisticsData', request.writeToBuffer());
+    final Uint8List rawData = await (_channel.invokeMethod(
+        'fetchStatisticsData', request.writeToBuffer()) as FutureOr<Uint8List>);
     return StatisticsData.fromBuffer(rawData);
   }
 }
